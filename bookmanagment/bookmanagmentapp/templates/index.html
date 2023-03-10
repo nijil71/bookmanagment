@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/1c419ff03d.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script>
+        //if text is more than 100 then it will be cut and add ... at the end
+        function cutText(text, limit){
+            var newText = text.split(" ").splice(0, limit).join(" ");
+            return newText;
+        }
+        window.onload=function(){
+            document.querySelectorAll("p").forEach(function(item){
+                item.innerHTML = cutText(item.innerHTML, 70);
+                item.innerHTML += "...";
+            })
+        }
+
+      </script>
+    </script>
+    <style>
+        body{
+            background-color: #BFACE2;
+        }
+        .navbar{
+            background-color: #BFACE2;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+        }
+        li{
+            list-style: none;
+            margin: 0 20px;
+        }
+        .nav-link{
+            color: #000;
+        }
+        .container-fluid{
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #BFACE2;
+            border-radius: 5px;
+            /* box-shadow: 0 0 10px rgba(0,0,0,0.1); */
+            margin-top: 20px;
+        }
+
+        .card-body{
+            float: right;
+            padding: 10px;
+        }
+        .card-body h3{
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .card-body p{
+            margin-top: 50px;
+            font-size: 14px;
+            color: #777;
+        }
+        .card img{
+            width: 50%;
+            height: 100%;
+            border-radius: 5px;
+        }
+        .card-title h5{
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 10px;
+            
+        }
+        
+        .card{
+            height: 100%;
+        }
+        .fa-book-open{
+            color: #000;
+        }
+        h1{
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 40px;
+            font-family: 'Times New Roman', Times, serif;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <nav class="navbar justify-content-center">
+        <ul class="nav justify-content-center">
+            <!-- <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">BOOKMANAGMENT</a>
+            </li> -->
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fa-solid fa-book-open"></i>
+                </a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://127.0.0.1:8000/register/">REGISTER</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://127.0.0.1:8000/login/">LOGIN</a>
+            </li>
+
+          </ul>
+    </nav>
+
+    <div class="container-fluid">
+        <h1>Harry Potter Books</h1>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                     <div class="row card-body">
+                        <img class="col-6"  src="https://images.ctfassets.net/usf1vwtuqyxm/35KbpLHvQvQtBBKs0vKErL/43985bc9e5bea863ccf9cc9561b62827/English_Harry_Potter_6_Epub_9781781100257.jpg">
+
+                        <div class="col-6">
+                            <div class="card-title">
+                                <h3>
+                                    Harry Potter and the Half-Blood Prince
+                                </h3>
+                                <h5>
+                                    J.K. Rowling
+                                </h5>
+                            </div>
+                            <div class="card-text">
+                                <p class="cuttext">
+                                    Harry Potter and the Half-Blood Prince is a fantasy novel written by British author J. K. Rowling and the sixth and penultimate novel in the Harry Potter series. The book follows Harry Potter, a wizard in his sixth year at Hogwarts School of Witchcraft and Wizardry. Harry must overcome a series of challenges to discover the identity of a mysterious dark force that haunts him and his friends.
+                                </p>      
+                        </div>
+                        <a href="{% static 'Noor-Book.com__Harry_Potter_and_the_Half_Blood_Prince_TKGs3Da.pdf' %}" download>
+                            <button class="btn btn-danger">Download</button>
+                        </a>                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+             <div class="row card-body">
+                <img class="col-6"  src="https://media.harrypotterfanzone.com/deathly-hallows-us-childrens-edition.jpg">
+
+                <div class="col-6">
+                    <div class="card-title">
+                        <h3>
+                            Harry Potter and the Deathly Hallows
+                        </h3>
+                        <h5>
+                            J.K. Rowling
+                        </h5>
+                    </div>
+                    <div class="card-text">
+                        <p class="cuttext">
+                            Harry Potter and the Deathly Hallows is a fantasy novel written by British author J. K. Rowling and the seventh and final novel of the Harry Potter series. The book was released on 21 July 2007, ending the series that began in 1997 with the publication of Harry Potter and the Philosopher's Stone. It was published in the United Kingdom by Bloomsbury Publishing, in the United States by Scholastic Corporation, and in Canada by Raincoast Books. The novel chronicles the events directly following Harry Potter and the Half-Blood Prince (2005), and the final confrontation between the wizards Harry Potter and Lord Voldemort.
+                        </p>      
+                </div>
+                    <button class="btn btn-danger">Download</button>
+        </div>
+    </div>
+    
+</div>
+</div>
+<div class="col-md-4">
+    <div class="card">
+         <div class="row card-body">
+            <img class="col-6"  src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F6%2F2016%2F09%2Fkkhp4.jpg">
+
+            <div class="col-6">
+                <div class="card-title">
+                    <h3>
+                        Harry Potter and the GoBlet of Fire
+                    </h3>
+                    <h5>
+                        J.K. Rowling
+                    </h5>
+                </div>
+                <div class="card-text">
+                    <p class="cuttext">
+                        Harry Potter and the Goblet of Fire is a fantasy novel written by British author J. K. Rowling and the fourth novel in the Harry Potter series. It follows Harry Potter, a wizard in his fourth year at Hogwarts School of Witchcraft and Wizardry, and the mystery surrounding the entry of Harry's name into the Triwizard Tournament, in which he is forced to compete.
+                    </p>      
+            </div>
+            <button class="btn btn-danger">Download</button>
+    </div>
+</div>
+    </div>
+    </div>
+    <div class="container-fluid">
+        <h1>Game Of Thrones Books</h1>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                     <div class="row card-body">
+                        <img class="col-6"  src="https://m.media-amazon.com/images/I/91dSMhdIzTL.jpg">
+
+                        <div class="col-6">
+                            <div class="card-title">
+                                <h3>
+                                    A Game of Thrones
+                                </h3>
+                                <h5>
+                                    George R.R. Martin
+                                </h5>
+                            </div>
+                            <div class="card-text">
+                                <p class="cuttext">
+                                    A Game of Thrones is the first novel in A Song of Ice and Fire, a series of fantasy novels by American author George R. R. Martin. It was first published on August 1, 1996. The novel won the 1997 Locus Award and was nominated for both the 1997 Nebula Award and the 1997 World Fantasy Award. The novella Blood of the Dragon, comprising the Daenerys Targaryen chapters from the novel, won the 1998 Hugo Award for Best Novella.
+                                </p>      
+                        </div>
+                        <button class="btn btn-danger">Download</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+             <div class="row card-body">
+                <img class="col-6"  src="https://upload.wikimedia.org/wikipedia/en/thumb/d/dc/A_Song_of_Ice_and_Fire_book_collection_box_set_cover.jpg/220px-A_Song_of_Ice_and_Fire_book_collection_box_set_cover.jpg">
+
+                <div class="col-6">
+                    <div class="card-title">
+                        <h3>
+                            A Song of Ice and Fire
+
+                        </h3>
+                        <h5>
+                            George R.R. Martin
+                        </h5>
+                    </div>
+                    <div class="card-text">
+                        <p class="cuttext">
+                            A Song of Ice and Fire is a series of epic fantasy novels by the American novelist and screenwriter George R. R. Martin. He began the first volume of the series, A Game of Thrones, in 1991, and it was published in 1996. Martin, who initially envisioned the series as a trilogy, has published five out of a planned seven volumes. The most recent volume, A Dance with Dragons, was published on 12 July 2011.
+                        </p>      
+                </div>
+                <button class="btn btn-danger">Download</button>
+        </div>
+    </div>
+    
+</div>
+</div>
+<div class="col-md-4">
+    <div class="card">
+         <div class="row card-body">
+            <img class="col-6"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuP3uv1gfng0fw0KrPG2hgVoaHJJn2_ffuBg&usqp=CAU">
+
+            <div class="col-6">
+                <div class="card-title">
+                    <h3>
+                        A Dance with Dragons                  
+                    </h3>
+                    <h5>
+                        George R.R. Martin
+                    </h5>
+                </div>
+                <div class="card-text">
+                    <p class="cuttext">
+                        A Dance with Dragons is the fifth of seven planned novels in the epic fantasy series A Song of Ice and Fire by American author George R. R. Martin. It was first published on 12 July 2011 in the United Kingdom, 13 July 2011 in the United States, and 14 July 2011 in Canada. The novel is the longest in the series, and the first to be published since A Feast for Crows in 2005.
+                    </p>      
+            </div>
+            <button class="btn btn-danger">Download</button>
+    </div>
+</div>
+    </div>
+    </div>
+
+
+    
+</body>
+</html>

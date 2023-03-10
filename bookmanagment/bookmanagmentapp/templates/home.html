@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="https://kit.fontawesome.com/1c419ff03d.js" crossorigin="anonymous"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body{
+            background-color: #f5f5f5;
+        }
+
+        .row{
+            margin-bottom: 10px;
+        }
+        .btn{
+            width: 100%;
+        }
+        .btn a{
+            color: #fff;
+            text-decoration: none;
+
+        }
+        h1{
+            text-align: center;
+            margin-top: 40px;
+        }
+        .container{
+            margin-top: 40px;
+        }
+        img{
+            width: 100%;
+            height: 350px;
+        }
+        .btn{
+            margin-top: 20px;
+            
+        }
+        .btn{
+            width: 100%;
+            margin-top: 20px;
+            background-color: #000;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            color: #fff;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .btn:hover{
+            background-color: #fff;
+            color: #000;
+            border: 1px solid #000;
+        }
+        .navbar{
+            background-color: #000;
+            padding: 10px;
+        }
+        .navbar ul{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            list-style: none;
+            padding: 0;
+        }
+        .navbar ul li{
+            margin: 0 10px;
+        }
+        .navbar ul li a{
+            color: #fff;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <nav class="navbar justify-content-center">
+        <ul class="nav justify-content-center">
+            <!-- <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">BOOKMANAGMENT</a>
+            </li> -->
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fa-solid fa-book-open"></i>
+                </a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">New</a>
+            </li>
+
+          </ul>
+    </nav>
+    <h1>
+        Welcome Back {{uname}}
+    </h1>
+        <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <img src="https://images.unsplash.com/photo-1571167530149-c1105da4c2c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTF8fGJvb2t8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="" width="100%">
+                <a href="http://127.0.0.1:8000/addbook/">
+                    <button class="btn btn-primary">
+                        Add Book
+                    </button>
+                </a>
+            </div>
+
+            <div class="col-4">
+                <img src="https://cdn.pixabay.com/photo/2016/12/18/13/44/download-1915749__340.png" alt="" width="100%">
+                <a href="http://127.0.0.1:8000/download/">
+                    <button class="btn btn-primary">
+                        Download Book
+                    </button>
+                </a>
+                </div>
+                <div class="col-4">
+                    <img src="https://cdn.pixabay.com/photo/2021/07/09/03/24/log-out-6398176__340.png" alt="" width="100%">
+
+                    <a href="http://127.0.0.1:8000/logout/">
+                        <button class="btn btn-primary">
+                            Logout
+                        </button>
+    
+                    </a>
+                </div>
+
+        </div>
+        
+
+</body>
+</html>
